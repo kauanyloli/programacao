@@ -14,3 +14,4 @@ n2= int(input('digide o valor da sua segunda nota'))
 
 media = (n1 * 2 + n2 *3)/5
 print(f'essa é sua media {media:.0f}')
+
