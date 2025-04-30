@@ -13,5 +13,5 @@ n1= int(input('digide o valor da sua primeira nota'))
 n2= int(input('digide o valor da sua segunda nota'))
 
 media = (n1 * 2 + n2 *3)/5
-print(f'essa é sua media {media:.0f}')
-
+print(f'essa é sua media :  {media:.0f}')
+# o media:.0f serve pra nao exxibir casas decimais
