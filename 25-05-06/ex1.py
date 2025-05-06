@@ -3,4 +3,6 @@
 V0 = float(input('difite o valor de V0'))
 t = float(input('difite o valor de t'))
 A = float(input('difite o valor de A'))
- = float(input('difite o valor de '))
+
+deltaS=  (V0 * t + ((A * (t*t))/2))
+print(f'o valor da distancia pecorrida é {deltaS}')
