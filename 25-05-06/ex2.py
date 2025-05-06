@@ -6,3 +6,7 @@
 # aceleraçao do carro(em metros por segundo ao quadrado)
 #o programa deve calcular e exibir o tempo necessario para o carro pecorrer essa distancia ate natal, formatado no padrão hh:mm:ss.
 
+
+V0 = float(input('difite o valor de V0'))
+t = int(input('difite o valor de t'))
+A = int(input('difite o valor de A'))
