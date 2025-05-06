@@ -10,8 +10,8 @@ if V0 <=0:
 A = int(input('difite o valor de A'))
 if A<=0: 
  sys.exit('informe uma aceleraçao positiva.')
+ 
 t = int(input('difite o valor de t'))
-
 if t <=0: 
  sys.exit('informe uma tempo positiva.')
 
