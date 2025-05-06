@@ -5,15 +5,15 @@ import sys
 
 V0 = int(input('difite o valor de V0'))#10
 if V0 <=0: 
- sys.exit('informe uma velocidade positiva.')
-    
+   sys.exit('informe uma velocidade positiva.')
+     
 A = int(input('difite o valor de A'))#11
 if A<=0: 
- sys.exit('informe uma aceleraçao positiva.')
+   sys.exit('informe uma aceleraçao positiva.')
  
 t = int(input('difite o valor de t'))#12
 if t <=0: 
- sys.exit('informe uma tempo positiva.')
+   sys.exit('informe uma tempo positiva.')
 
 
 deltaS=  (V0 * t + ((A * (t*t))/2))
