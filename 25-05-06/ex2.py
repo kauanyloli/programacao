@@ -22,9 +22,12 @@ if A<=0:
 d*=1000   
 v0 /=3.6
 delta= v0**2-4*A*d
-if delta<0:
-    sys.exit('nao é possivel calcular o tempo')
+#if delta<0:
+ #   sys.exit('nao é possivel calcular o tempo')
 t=(-v0+delta**0.5)/(2*A)    
-
-print(f'o tempo gasto foi{t:.1f}')        
+hora=t//3600
+t=t%3600
+minutos=t//60
+segundos=t%60
+print(f'o tempo gasto foi{hora}{minutos}{segundos}')        
     
