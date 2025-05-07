@@ -6,7 +6,22 @@
 # aceleraçao do carro(em metros por segundo ao quadrado)
 #o programa deve calcular e exibir o tempo necessario para o carro pecorrer essa distancia ate natal, formatado no padrão hh:mm:ss.
 
+import sys
 
-V0 = float(input('difite o valor de V0'))
-t = int(input('difite o valor de t'))
-A = int(input('difite o valor de A'))
+d= int(input('digite a distancia (Km)'))
+if d<=0:
+    sys.exit('informe um valor possitivo')
+v0 = float(input('digite a velocidade inicial(Km/h)'))
+if v0<=0:
+    sys.exit('informe um valor possitivo')
+    
+A = int(input('digite o valor de A(m/s2)')) 
+if A<=0:
+    sys.exit('informe um valor possitivo')
+    
+d*=1000   
+v0 /=3.6
+delta= v0**2-4*A*d
+if delta<0:
+    sys.exit('nao é possivel calcular o tempo')    
+    
