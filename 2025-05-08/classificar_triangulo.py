@@ -8,3 +8,8 @@
    - Obtusângulo: Possui um ângulo interno obtuso (maior que 90).
    - Acutângulo: Possui todos os ângulos internos agudos (menores que 90).
 '''
+
+import sys
+angA= int(input('Digite o ámgulo A :'))
+angB = int(input('Digite o ámgulo B:'))
+angC = int(input('Digite o ámgulo C:'))
