@@ -21,6 +21,5 @@ if angulo3 <0:
     sys.exit('angulo invalido')
 
 if angulo1+angulo2+angulo3 ==180:
-     
-else:
-    sys.exit('nao é um triangulo')
+    
+else: print('nao é um triangulo')
