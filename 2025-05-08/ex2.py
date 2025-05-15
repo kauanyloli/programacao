@@ -22,4 +22,3 @@ if angulo3 <0:
 
 if angulo1+angulo2+angulo3 ==180:
     
-else: print('nao é um triangulo')
