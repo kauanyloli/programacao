@@ -5,7 +5,28 @@ Entre três e quatro horas: R$ 5,00/hora ou fração;
 Horas seguintes: R$ 3,00/hora ou fração;
 Depois de 12h, o custo passa a ser fixo: R$ 30,00.
 
-Faça um programa que solicite ao usuário o tempo que um veículo permaneceu no estacionamento (no formato HH:MM) e exiba o valor a ser pago pelo responsável.
+Faça um programa que solicite ao usuário o tempo que um veículo permaneceu no estacionamento (no for
+mato HH:MM) e exiba o valor a ser pago pelo responsável.
 
 
-Como exemplo, considere que o carro ficou 5 horas e 10 minutos no estacionamento; deve pagar: R$ 16,00 (pelas duas primeiras horas) + R$ 10,00 (pela terceira e quarta horas) + R$ 6,00 (pela quinta hora e fração da sexta hora): total de R$ 32,00'''
+Como exemplo, considere que o carro ficou 5 horas e 10 minutos no estacionamento; deve pagar: R$ 16,00 (pelas duas primeiras ho
+ras) + R$ 10,00 (pela terceira e quarta horas) 
++ R$ 6,00 (pela quinta hora e fração da sexta hora): total de R$ 32,00'''
+
+t=float(input('Informe o tempo que o veiculo permaneceu no estacionamento no formato HH:MM)'))
+
+if t<=1:
+    valor=8*t
+    print(f'Valor que deve ser pago:',valor)
+    
+if t<=2:
+    valor=8*t
+    print(f'Valor que deve ser pago:',valor)
+    
+if t<=3:
+    valor=5*t
+    print(f'Valor que deve ser pago:',valor)
+if t<=4:
+    valor=5*t
+    print(f'Valor que deve ser pago:',valor)    
+          
