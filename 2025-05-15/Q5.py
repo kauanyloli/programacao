@@ -15,18 +15,19 @@ ras) + R$ 10,00 (pela terceira e quarta horas)
 
 t=float(input('Informe o tempo que o veiculo permaneceu no estacionamento no formato HH:MM)'))
 
-if t<=1:
-    valor=8*t
-    print(f'Valor que deve ser pago:',valor)
-    
 if t<=2:
     valor=8*t
     print(f'Valor que deve ser pago:',valor)
-    
-if t<=3:
+        
+if 3<=t<=4:
     valor=5*t
     print(f'Valor que deve ser pago:',valor)
-if t<=4:
-    valor=5*t
+    
+if 4<t<=12:
+   valor=16+10+(t-4)*3
+   print(f'Valor que deve ser pago:',valor)       
+
+if t>=12:
+    valor=30
     print(f'Valor que deve ser pago:',valor)    
-          
+                    
