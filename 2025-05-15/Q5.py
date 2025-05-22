@@ -19,16 +19,16 @@ h=h*60
 t=m+h
 
 if t<=120:
-    valor=8*(t/60)
+    valor=8*int(t/60)
     print(f'Valor que deve ser pago:',valor)
         
 if t<=240:
-    valor=5*(t/60)
+    valor=5*int(t/60)
     print(f'Valor que deve ser pago:',valor)
     
 if 240<t<720:
     #16 das 2 primeiras horas e 10 da 3 e 4 logo 26
-   valor=26+((t-120)/60)*3
+   valor=26+int((t-240)/60)*3
    print(f'Valor que deve ser pago:',valor)       
 
 if t>=720:
