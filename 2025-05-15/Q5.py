@@ -13,22 +13,25 @@ Como exemplo, considere que o carro ficou 5 horas e 10 minutos no estacionamento
 ras) + R$ 10,00 (pela terceira e quarta horas) 
 + R$ 6,00 (pela quinta hora e fração da sexta hora): total de R$ 32,00'''
 
-t=float(input('Informe o tempo que o veiculo permaneceu no estacionamento no formato HH:MM)'))
+h=float(input('Informe a(s) hora(s) que o veiculo permaneceu no estacionamento no formato'))
+m=float(input('Informe os minutos  que o veiculo permaneceu no estacionamento no formato '))
+h=h*60
+t=m+h
 
-if t<=2:
-    valor=8*t
+if t<=120:
+    valor=8*(t/60)
     print(f'Valor que deve ser pago:',valor)
         
-if 3<=t<=4:
-    valor=5*t
+if t<=240:
+    valor=5*(t/60)
     print(f'Valor que deve ser pago:',valor)
     
-if 4<t<12:
+if 240<t<720:
     #16 das 2 primeiras horas e 10 da 3 e 4 logo 26
-   valor=26+(t-4)*3
+   valor=26+((t-120)/60)*3
    print(f'Valor que deve ser pago:',valor)       
 
-if t>=12:
+if t>=720:
     valor=30
     print(f'Valor que deve ser pago:',valor)    
                     
