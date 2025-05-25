@@ -16,3 +16,4 @@ O tempo de viagem (no formato HH:MM:SS);
 A velocidade média (Km/h) global e a velocidade média em movimento (Km/h);
 O custo da viagem com combustível (em R$);
 O desempenho do carro (em Km/l, l/h e R$/Km).'''
+
