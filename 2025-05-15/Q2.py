@@ -3,6 +3,7 @@ m saque em um terminal de caixa eletrônico)e que calcule a quantidade de cédul
 R$ 20,00, R$ 10,00, R$ 5,00 e R$ 2,00 e de moedas de R$ 1,00, R$ 0,50, R$ 0,25, R$ 0,10, R$ 0,05 e R$ 0,01.
 '''
 #feita!
+#arrasei
 import sys
 
 Num= float(input('Por gentileza informe um  valor possitivo  desejado para o saque'))
