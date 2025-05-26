@@ -12,26 +12,36 @@ mato HH:MM) e exiba o valor a ser pago pelo responsável.
 Como exemplo, considere que o carro ficou 5 horas e 10 minutos no estacionamento; deve pagar: R$ 16,00 (pelas duas primeiras ho
 ras) + R$ 10,00 (pela terceira e quarta horas) 
 + R$ 6,00 (pela quinta hora e fração da sexta hora): total de R$ 32,00'''
+#terminei
 
 h=float(input('Informe a(s) hora(s) que o veiculo permaneceu no estacionamento no formato'))
 m=float(input('Informe os minutos  que o veiculo permaneceu no estacionamento no formato '))
 m=m/60
-t=m+h
+valor=0
 
-if t<=2:
-    valor=8*t
-    print(f'Valor que deve ser pago:',valor)
+if h<=2:
+    valor+=8*h
+    if m>0:
+        valor+=8
+        print(f'Valor que deve ser pago:',valor)
+  
         
-if t<=4:
-    valor=5*t
+elif h<=4:
+    valor=5*h
+    if m>0:
+        valor+=5
+    
     print(f'Valor que deve ser pago:',valor)
     
-if 4<t<=12:
+elif h<=12:
     #16 das 2 primeiras horas e 10 da 3 e 4 logo 26
-   valor=26+t*3
-   print(f'Valor que deve ser pago:',valor)       
+   valor+=26+(h-4)*3
+   if m>0:
+       valor+=3
+   print(f'Valor que deve ser pago:',valor)
+   
 
-if t>=12:
-    valor=30
-    print(f'Valor que deve ser pago:',valor)    
+else :
+    valor+=30
+    print(f'Valor que deve ser pago:',valor)   
                     
