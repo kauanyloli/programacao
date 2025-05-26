@@ -25,9 +25,11 @@ delta maior que zero, a equação tem duas raízes reais distintas;
 delta igual a zero, a equação tem uma raiz real (ou duas iguais);
 delta menor que zero, a equação não tem raízes reais.
 
-Elabore um programa que solicite ao usuário os coeficientes da equação (a, b e c) e exiba as raízes reais da equação (quando houver).'''
+Elabore um programa que solicite ao usuário os coeficientes da equação
+ (a, b e c) e exiba as raízes reais da equação (quando houver).'''
 # acho que terminei 
 # refazer sem import math
+#terminei
 
 import sys
 
