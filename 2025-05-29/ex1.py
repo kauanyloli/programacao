@@ -18,7 +18,8 @@ else:
     contDivisor= 0
     while divisores <=n:
         if (n % divisores)==0:
-             contDivisor +=1         
+             contDivisor +=1 
+        divisores+=1         
     if contDivisor == 2:
         print(f'{n} é primo.')
     else:
