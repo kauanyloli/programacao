@@ -1,0 +1,1 @@
+''' fazer o ex1 e 2 usando o for'''
