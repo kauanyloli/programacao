@@ -1,3 +1,3 @@
 '''
- Dados dois numeros inteiros positivos determinar o maximo d
+ Dados dois numeros inteiros positivos determinar o maximo divisor comum
 '''
