@@ -12,5 +12,11 @@
 
 strTexto = input('Digite um texto')
 
-for strLetra in strTexto:
-   print(strLetra)
+#for strLetra in strTexto:
+#   print(strLetra)
+
+intPocisao=0
+
+while intPocisao < len(strTexto):
+   print(strTexto[intPocisao])
+   intPocisao+=1
