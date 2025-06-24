@@ -19,4 +19,5 @@ while mInicial>=1:
 tempoF=tempo/60 
 print('a massa final sera de :{mFinal} o tempo de decaimento sera de :{tempoF}')
  
+ 
     
