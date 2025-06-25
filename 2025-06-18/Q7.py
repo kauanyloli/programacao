@@ -9,7 +9,7 @@ def mostrar_palavra(palavra, letras_acertadas):
     return ' '.join(letra if letra in letras_acertadas else '_' for letra in palavra)
 
 def jogo_forca():
-    palavra = PALAVRA_CHAVE.lower()
+    palavra = CHAVE.lower()
     letras_acertadas = set()
     tentativas_restantes = 6
     

@@ -5,7 +5,7 @@ Massa Inicial: 250 gramas
 Massa Final: 0.48828125 gramas
 Tempo de Decaimento: 0:07:30'''
 import sys
-mInicial= int(input('digite o valor da Massa:'))
+mInicial= float(input('digite o valor da Massa:'))
 mFinal=0
 tempo=0
 tempoF=0
