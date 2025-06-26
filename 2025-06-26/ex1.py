@@ -27,3 +27,15 @@ lstNomes = ['Scooby-Doo'       , 'Fred Flintstone', 'Zé Colmeia' , 'Dom Pixote'
             'Formiga Atômica'  , 'Jonny Quest'    , 'Space Ghost', 'Manda-Chuva'    , 
             'Barney Rubble'    , 'Salsicha'       , 'Falcão Azul', 'Batatinha'      , 
             'Penélope Charmosa', 'Pepe Legal'     , 'Catatau'    , 'Dick Vigarista' ]
+
+import sys, random
+
+try:
+   intN = int(input('Informe o valor de N: '))
+except ValueError:
+   sys.exit('\nERRO: Informe um valor inteiro válido...\n')
+except Exception as erro:
+   sys.exit(f'\nERRO: {erro}...\n')
+else:
+   if intN <= 0 or intN > 100:
+      sys.exit('\nERRO: Informe um valor entre 1 e 100...\n')
