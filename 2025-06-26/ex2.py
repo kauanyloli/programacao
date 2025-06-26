@@ -36,4 +36,5 @@ lstTimes = [
             ['Red Bull Bragantino', 14, 8, 16, 40, 45], ['Santos', 13, 11, 14, 39, 41],
             ['São Paulo', 17, 7, 14, 48, 38]          , ['Sport', 11, 12, 15, 35, 42],
             ['Vasco da Gama', 9, 15, 14, 33, 40]      , ['Vitória', 7, 13, 18, 28, 47]
+            
          ]
