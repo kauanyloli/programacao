@@ -11,26 +11,30 @@
 '''
 
 import sys, random
-
+ 
 try:
-    intnum = int(input('informe o valor de num: '))
-
-    if intnum > 0 or intnum > 1000:
-        print('ERRO: Nota inválida. Informe entre 0 e +1000...')
-    #elif intnum < 0:
-    #    print('ERRO: Nota inválida. Informe entre -100 e 0 ...')
-
+   intN = int(input('Informe o valor de N: '))
 except ValueError:
-    sys.exit('/nERRO: informe um valor inteiro válido.../n')
+   sys.exit('\nERRO: Informe um valor inteiro válido...\n')
 except Exception as erro:
-    sys.exit(f'/nERRO: {erro}.../n')
+   sys.exit(f'\nERRO: {erro}...\n')
 else:
-#intnum = 0
+   if intN <= 0 or intN > 100:
+      sys.exit('\nERRO: Informe um valor entre 1 e 100...\n')
 
-    lista = list()
+   # ----------------------------------------------------------------------
+   # Item 2
+   lstValores = random.sample(range(1001), intN)
 
-    for num in range(intnum):
-        lista.append(random.randint(1000))
-        #if intnum [0 , +100]:
-        #   print('')
-    print(lista)
+   print(lstValores)
+
+   # ----------------------------------------------------------------------
+   # Item 3
+   lstRaizes = list()
+
+   for intValor in lstValores:
+      floatRaiz = math.sqrt(intValor)
+
+      lstRaizes.append(floatRaiz)
+
+   print(lstRaizes)    
