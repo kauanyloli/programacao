@@ -38,3 +38,32 @@ lstTimes = [
             ['Vasco da Gama', 9, 15, 14, 33, 40]      , ['Vitória', 7, 13, 18, 28, 47]
             
          ]
+lstTimes = [
+            ['Atlético Mineiro', 20, 8, 7, 53, 26]    , ['Bahia', 12, 10, 11, 39, 37],
+            ['Botafogo', 14, 12, 8, 46, 29]           , ['Ceará', 10, 11, 14, 34, 43],
+            ['Corinthians', 18, 9, 10, 50, 31]        , ['Cruzeiro', 9, 14, 10, 33, 33],
+            ['Flamengo', 23, 7, 7, 62, 27]            , ['Fluminense', 15, 11, 9, 44, 32],
+            ['Fortaleza', 11, 13, 11, 36, 35]         , ['Grêmio', 13, 9, 15, 38, 43],
+            ['Internacional', 16, 8, 13, 45, 39]      , ['Juventude', 8, 13, 15, 30, 44],
+            ['Mirassol', 10, 10, 17, 32, 46]          , ['Palmeiras', 22, 9, 6, 58, 25],
+            ['Red Bull Bragantino', 14, 8, 16, 40, 45], ['Santos', 13, 11, 14, 39, 41],
+            ['São Paulo', 17, 7, 14, 48, 38]          , ['Sport', 11, 12, 15, 35, 42],
+            ['Vasco da Gama', 9, 15, 14, 33, 40]      , ['Vitória', 7, 13, 18, 28, 47]
+         ]
+
+# ----------------------------------------------------------------------
+# Questão 01
+for time in lstTimes:
+   time.insert(4, time[1]*3 + time[2])
+   time.append(time[5] - time[6])
+
+# ----------------------------------------------------------------------
+# Questão 02
+# TODO: Fazer na sala de aula no dia 01/07/2026
+# TODO: Pesquisar a função SORT() usando funções LAMBDA
+lstTimes.sort(key=lambda time: (time[4], time[1], time[7], time[5]), reverse=True)
+
+# ----------------------------------------------------------------------
+# Questão 03
+for time in lstTimes:
+   print(time)
