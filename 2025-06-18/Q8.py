@@ -19,4 +19,26 @@ Quantos movimentos válidos ele executou;
 Quais foram os movimentos válidos que ele executou;
 Em que quadrante ele iniciou (posição inicial de X e Y) e;
 Em que quadrante ele terminou (posição final de X e Y).'''
+#posiçao inicial
+print('Digite a posiçao inicial do robo:')
+x= int(input('cordenada X:'))
+y= int(input('cordenada y:'))
 
+print('/n digite cordenadas de movimento: U, D, R, L, O, N, E, W')
+comandos= input('digite a sequencia de comandos :').superior()
+
+for comando in comandos:
+    if comando== 'voce' or comando== 'N':
+        y+=1
+        print('indo para Norte({x},{y})')
+    elif comando== 'D' or comando== 'S':
+        y-=1
+        print('indo para Sul({x},{y})')
+    elif comando== 'R' or comando== 'E':
+        x+=1
+        print('indo para Leste({x},{y})')     
+    elif comando== 'EU' or comando== 'O' or comando=='C':
+        x-=1
+        print('indo para Oeste({x},{y})')    
+
+    print('posiçao final do robo é',(x,y))
