@@ -8,7 +8,7 @@ O jogo deverá considerar maiúsculas e minúsculas iguais. O jogador poderá er
 try:
     import random
     palavras = ("Naruto ","Sasuke ","sakura","Gaara","itachi","deidara","kakashi","sasori","konan","pain","hidan",
-                "","","","")
+                "kakuzu","tobi","neji","tobirima")
     # Escolhendo uma palavra aleatória!
     segredo = palavras[random.randint(0,len(palavras)-1)]
     # Convertendo todas as letras em MAIÚSCULAS!
