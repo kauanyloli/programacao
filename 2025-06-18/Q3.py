@@ -3,19 +3,23 @@ de pontos que formam triângulos equiláteros em um plano (veja a definição de
 
 Faça um programa que solicite ao usuário um número inteiro positivo e informe se ele é (ou não) triangular, de acordo com a definição.'''
 
-import math
+try:
+    num = int(input("Digite um número inteiro positivo: "))
+    if num <= 0:
+        print("Por favor, insira um número positivo.")
+    else:
+        n = 1
+        triangular = False
 
-def eh_triangulo(n):
-    if n < 0:
-        return False
-    
-    # Resolvendo a equação n*(n+1)/2 = numero
-    discriminante = 1 + 8*n
-    raiz = (-1 + math.sqrt(discriminante)) / 2
-    
-    # Verifica se a raiz é um número natural
-    return raiz.is_integer() and raiz > 0
+        while n * (n + 1) // 2 <= num:
+            if n * (n + 1) // 2 == num:
+                triangular = True
+                break
+            n += 1
 
-# Entrada do usuário
-numero = int(input("Digite um número inteiro positivo: "))
-print(f"O número {numero} {'é' if eh_triangulo(numero) else 'não é'} triangular.")
+        if triangular:
+            print(f"O número {num} é triangular.")
+        else:
+            print(f"O número {num} não é triangular.")
+except:
+    print("Entrada inválida. Por favor, digite um número inteiro.")

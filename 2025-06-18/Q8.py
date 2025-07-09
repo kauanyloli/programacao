@@ -19,78 +19,71 @@ Quantos movimentos válidos ele executou;
 Quais foram os movimentos válidos que ele executou;
 Em que quadrante ele iniciou (posição inicial de X e Y) e;
 Em que quadrante ele terminou (posição final de X e Y).'''
+#posiçao inicial
+import sys
 
-def obter_posicao_inicial():
-    while True:
-        try:
-            x = int(input("Digite a coordenada X inicial: "))
-            y = int(input("Digite a coordenada Y inicial: "))
-            return x, y
-        except ValueError:
-            print("Por favor, digite números válidos!")
+print('Posição Inicial do Robô')
+while True:
+    try:
+        x_in = int(input('Digite a coordenada X inicial do robô: '))
+        y_in = int(input('Digite a coordenada Y inicial do robô: '))
+        break
+    except ValueError:
+        sys.exit('Entrada inválida. Por favor, digite números inteiros para as coordenadas.')
 
-def determinar_quadrante(x, y):
-    if x > 0 and y > 0:
-        return "Primeiro quadrante"
-    elif x < 0 and y > 0:
-        return "Segundo quadrante"
-    elif x < 0 and y < 0:
-        return "Terceiro quadrante"
-    elif x > 0 and y < 0:
-        return "Quarto quadrante"
-    elif x == 0 and y > 0:
-        return "Eixo Y positivo"
-    elif x == 0 and y < 0:
-        return "Eixo Y negativo"
-    elif x > 0 and y == 0:
-        return "Eixo X positivo"
-    elif x < 0 and y == 0:
-        return "Eixo X negativo"
-    else:
-        return "Origem (0,0)"
+posicao_x = x_in
+posicao_y = y_in
+movimentos_validos = []
 
-def processar_movimentos(x, y):
-    movimentos = input("Digite a sequência de movimentos: ").upper()
-    movimentos_validos = []
-    direcoes = {
-        'U': (0, 1),  # cima
-        'D': (0, -1), # baixo
-        'R': (1, 0),  # direita
-        'L': (-1, 0), # esquerda
-        'N': (1, 1),  # nordeste
-        'E': (1, -1), # sudeste
-        'W': (-1, -1),# sudoeste
-        'O': (-1, 1)  # noroeste
-    }
-    
-    for movimento in movimentos:
-        if movimento in direcoes:
-            dx, dy = direcoes[movimento]
-            x += dx
-            y += dy
-            movimentos_validos.append(movimento)
-    
-    return x, y, movimentos_validos
+print('\n--- Comandos de Movimento ---')
+comandos = input('Digite a string de comandos de movimento (U, D, R, L, O, N, E, W): ').upper()
 
-def main():
-    print("=== Simulador de Movimento do Robô ===")
-    
-    # Obter posição inicial
-    x, y = obter_posicao_inicial()
-    quadrante_inicial = determinar_quadrante(x, y)
-    
-    # Processar movimentos
-    x_final, y_final, movimentos_validos = processar_movimentos(x, y)
-    quadrante_final = determinar_quadrante(x_final, y_final)
-    
-    # Exibir resultados
-    print("\n=== Resultados ===")
-    print(f"Posição inicial: ({x}, {y})")
-    print(f"Quadrante inicial: {quadrante_inicial}")
-    print(f"Posição final: ({x_final}, {y_final})")
-    print(f"Quadrante final: {quadrante_final}")
-    print(f"Quantidade de movimentos válidos: {len(movimentos_validos)}")
-    print(f"Movimentos válidos: {', '.join(movimentos_validos)}")
+movimentos = {
+    'U': (0, 1),   # Cima
+    'D': (0, -1),  # Baixo
+    'R': (1, 0),   # Direita
+    'L': (-1, 0),  # Esquerda
+    'O': (-1, 1),  # cima-esquerda
+    'N': (1, 1),   # cima-direita
+    'E': (1, -1),  # baixo-direita
+    'W': (-1, -1)  # baixo-esquerda
+}
 
-if __name__ == "__main__":
-    main()
+for comando in comandos:
+    if comando in movimentos:
+        dx, dy = movimentos[comando]
+        posicao_x += dx
+        posicao_y += dy
+        movimentos_validos.append(comando)
+
+quadrante_inicial = ''
+if x_in == 0 or y_in== 0:
+    quadrante_inicial = 'Nenhum (sobre um eixo)'
+elif x_in > 0 and y_in > 0:
+    quadrante_inicial = 'Primeiro'
+elif x_in < 0 and y_in> 0:
+    quadrante_inicial = 'Segundo1'
+elif x_in < 0 and y_in < 0:
+    quadrante_inicial = 'Terceiro1'
+else:
+    quadrante_inicial = 'Quarto1'
+
+quadrante_final = ''
+if posicao_x == 0 or posicao_y == 0:
+    quadrante_final = 'Nenhum (sobre um eixo)'
+elif posicao_x > 0 and posicao_y > 0:
+    quadrante_final = 'Primeiro'
+elif posicao_x < 0 and posicao_y > 0:
+    quadrante_final = 'Segundo'
+elif posicao_x < 0 and posicao_y < 0:
+    quadrante_final = 'Terceiro'
+else:
+    quadrante_final = 'Quarto'
+
+print('\n--- Resultados da Simulação ---')
+print(f'Posição inicial do robô: ({x_in}, {y_in})')
+print(f'Posição final do robô: ({posicao_x}, {posicao_y})')
+print(f'Total de movimentos válidos executados: {len(movimentos_validos)}')
+print(f'Movimentos válidos executados: {",".join(movimentos_validos) if movimentos_validos else "Nenhum"}')
+print(f'Quadrante inicial do robô: {quadrante_inicial}')
+print(f'Quadrante final do robô: {quadrante_final}')

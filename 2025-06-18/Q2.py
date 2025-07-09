@@ -7,41 +7,21 @@
 
 Faça um programa que encontra e exibe os números menores de 1000000, que são múltiplos de 2 ou 5 e que podem ser escritos pela soma das potências de 5 de seus dígitos.
 '''
-def obter_digito(num, posicao):
-    """Retorna o dígito na posição especificada."""
-    return num // (10 ** posicao) % 10
-
-def verificar_numero(numero):
-    """Verifica se um número pode ser escrito como soma de potências de 5 dos seus dígitos."""
-    temp = numero
-    soma = 0
-    
-    while temp > 0:
-        digito = temp % 10
-        soma += digito ** 5
-        temp //= 10
-        
-    return soma == numero
-
-def encontrar_numeros(limite=1000000):
-    """Encontra todos os números menores que limite que são múltiplos de 2 ou 5
-    e podem ser escritos como soma de potências de 5 dos seus dígitos."""
-    resultados = []
-    
-    # Verificamos apenas múltiplos de 2 ou 5
-    for i in range(2, limite, 2):  # Começamos com 2 e pulamos de 2 em 2
-        if i % 5 == 0:  # Se já é múltiplo de 5, não precisamos verificar mais
-            if verificar_numero(i):
-                resultados.append(i)
-        elif verificar_numero(i):
-            resultados.append(i)
-            
-    return resultados
-
-# Exemplo de uso com limite menor para demonstração
-limites_teste = [1000, 10000, 100000]
-for limite in limites_teste:
-    print(f"\nNúmeros encontrados até {limite}:")
-    resultados = encontrar_numeros(limite)
-    for num in resultados:
-        print(num)
+try:
+    # Definição de alcance, isto é, de 0 a 1 Milhão, conforme enunciado!
+    for num in range(0,1000000):
+        # Filtra se multiplo de 2 ou 5!
+        if num % 5 == 0 or num % 2 == 0:
+            # Transformando número em string para trabalhar com o comando for!
+            var_1 = str(num)
+            # Atribuição de soma para uso no laço de for!
+            soma = 0
+            #
+            for x in var_1:
+                soma = soma + int(x)**5 # Alternar para int(x)**4 e checar com exemplo do enunciado!
+            # Compara se número é igual a soma das potências de 5 de seus dígitos!
+            if soma == num:
+                # Exibe se a comparação anterior for verdadeira!
+                print(num,soma)
+except:
+    print("Em algum lugar, de alguma forma, algo deu errado e a culpa provavelmente foi sua!")
